@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Input, Item, Form, Icon } from 'native-base';
+import { Container, Input, Item, Form, Icon, Button, Text } from 'native-base';
 import { View, Image } from 'react-native';
+import PasswordTextBox from '../../../common/utils/passwordTextBox';
 import styles from './login-layout-style';
 import mainStyles from '../../../../assets/styles/main';
 import logo from '../../../../assets/image/bee.png';
@@ -14,6 +15,11 @@ class SplashScreenLayout extends React.Component {
       password: '',
     };
   }
+
+  updateState(password) {
+    this.setState({ password });
+  }
+
   render() {
     return (
       <Container style={Colors.SUN_FLOWER}>
@@ -44,26 +50,8 @@ class SplashScreenLayout extends React.Component {
               paddingHorizontal: 10
             }}
             >
-              <Icon type="FontAwesome" name='lock' />
-              <Input
-                secureTextEntry={true}
-                placeholder="Password"
-                onChangeText={password => {
-                  this.setState({ password });
-                  console.log('Password', this.state.password);
-                }}
-                value={this.state.password}
-              />
+              <PasswordTextBox type='FontAwesome' icon='lock' placeholder='Password' onChange={(v) => this.updateState('password', v)} />
             </Item>
-            {/* <Item floatingLabel>
-              <Input
-                style={{color: '#fff'}}
-                onChangeText={text => {
-                  this.setState({text});
-                }}
-                value={this.state.text}
-              />
-            </Item> */}
           </Form>
         </View>
       </Container>
