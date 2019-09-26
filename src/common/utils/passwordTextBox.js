@@ -17,7 +17,10 @@ class PasswordTextBox extends React.Component {
     render() {
         const { type, icon, onChange, placeholder } = this.props;
         return (
-            <Item>
+            <Item style={{
+                borderColor: 'transparent',
+            }}
+            >
                 <Icon active type={type} name={icon} />
                 <Input secureTextEntry={this.state.password} placeholder={placeholder} onChangeText={(e) => onChange(e)} />
                 <Icon name={this.state.icon} onPress={() => this.changeIcon()} />
