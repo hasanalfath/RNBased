@@ -13,5 +13,17 @@ export default {
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
         elevation: 5,
+    },
+
+    pl20: {
+        paddingLeft: 20,
+    },
+
+    m20: {
+        margin: 20,
+    },
+
+    footerTabText: {
+        fontSize: 12,
     }
 };

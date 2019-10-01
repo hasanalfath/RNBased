@@ -18,4 +18,17 @@ export default {
     marginHorizontal: 20,
     marginVertical: 5,
   },
+  errorMessage: {
+    color: Colors.RED,
+    fontSize: 12,
+    paddingLeft: 10,
+    marginVertical: 10
+  },
+  signUpContainer: {
+    margin: 20,
+    alignItems: 'center',
+  },
+  signUpText: {
+    fontSize: 14
+  }
 };
